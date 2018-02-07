@@ -35,10 +35,11 @@ try:
         print(recvSocket.recv(2048))
         print('Answering back...')
         recvSocket.send(b"HTTP/1.1 200 OK\r\n\r\n" +
-                        b"<html><body><h1>Hello World!</h1>" +
+                        b"<html><body><h1>Hello Irene!</h1>" +
                         b"<p>And in particular hello to you, " +
                         bytes(address[0], 'utf-8') +
-                        b"</p>" +
+                        b"</p><a href='hola'> hola<a/>" +
+                        b"<img src='http://1.bp.blogspot.com/-PctkotjRkDA/Tbfl7aJOifI/AAAAAAAAAcQ/CVMEbd9Qo6Q/s1600/DSCF8813.JPG' alt='gsyc' />" +
                         b"</body></html>" +
                         b"\r\n")
         recvSocket.close()
